@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currying Task</title>
+</head>
+
+<body>
+    <h1>Task-1 Currying</h1>
+    <script>
+
+        function filterMapFilterDivideAdd(array) {
+            return function (filterValue) {
+                console.log(array.filter(num => num === filterValue));
+                return function (dividevalue) {
+                    console.log(array.map(num => num / dividevalue));
+                    return function (addvalue) {
+                        console.log(array.map(num => num + addvalue));
+                    }
+                }
+            }
+        }
+        const randomArray = [10, 20, 30, 55];
+
+        const filtervalue = 55;
+        const dividevalue = 2;
+        const addValue = 2;
+
+        const result = filterMapFilterDivideAdd(randomArray)(filtervalue)(dividevalue)(addValue);
+
+
+        // other same way
+
+        // function filterMapFilterDivideAdd(array) {
+        //     return function (filterValue) {
+        //         return function (mapValue) {
+        //             return function (dividevalue) {
+        //                 return function (addvalue) {
+        //                     return array.filter(num => num === filterValue)
+        //                         .map(num => num * mapValue)
+        //                         .map(num => num / dividevalue)
+        //                         .map(num => num + addvalue);
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

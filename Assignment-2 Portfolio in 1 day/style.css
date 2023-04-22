@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/lovely-home");
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    /* background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%); */
+    background-color: #002733;
+    color: #ffffff;
+}
+
+.navbar {
+    border-bottom: 2px solid #FF9F55;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.myName{
+    font-size: 50px;
+    font-weight: bold;
+    color: #351458;
+}
+.navbar h1{
+    font-family: 'Itim', cursive;
+    color: #FF9F55;
+    margin: 10px 0px 0px 30px;
+}
+
+
+.navbar li{
+    font-family: "Montserrat";
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+    color: white;
+    margin: 10px 0px 0px 30px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease 0s;
+}
+
+.me{
+    /* background-color: black; */
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+    border-radius: 15px;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+}
+
+.me .rightBar{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.rightBar p {
+    /* text-align: center; */
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+
+.myImage{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+
+h1{
+    font-size: 70px;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+  
+span{
+    color: #FF9347;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: "Montserrat";
+}
+
+
+.customButton {
+  background-color: transparent;
+  border: 2px solid #FF9F55;
+  border-radius: 0.6em;
+  color: white;
+  font-size: 1rem;
+  padding: 1.2em 2.5em;
+  cursor: grab;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 900;
+  margin-top: 30px;
+}
+
+.customButton:hover {
+  color: #ffffff;
+  outline: 0;
+}
+
+.animatedButtonX {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.animatedButtonX:hover {
+  box-shadow: 0 0 40px 40px #FF9F55 inset;
+  color: #002733;
+}
+
+
+.skills{
+    color: #fff;
+    margin: 20px;
+    margin-bottom: 10%;
+    
+}
+.skillContainer{
+    position: relative;
+}
+
+.skills h1{
+    text-align: center;
+    color: #fff;
+    font-family: "Montserrat";
+    font-size: 200px;
+    font-weight: 500;
+    margin-right:500px;
+}
+
+.skills img{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    margin-left: 40%;
+    margin-top: -2%;
+    rotate: -15deg;
+}
+
+.skills ul{
+    text-align: right;
+    padding: 2%;
+}
+
+.skills li{
+    font-size: xx-large;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    list-style: none;
+}
+
+/* timeline for my life */
+
+
+.timeline {
+position: relative;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.timeline::after {
+content: '';
+position: absolute;
+width: 6px;
+background-color: white;
+top: 0;
+bottom: 0;
+left: 50%;
+margin-left: -3px;
+}
+
+.container {
+padding: 10px 40px;
+position: relative;
+background-color: inherit;
+width: 50%;
+}
+
+.container::after {
+content: '';
+position: absolute;
+width: 25px;
+height: 25px;
+right: -17px;
+background-color: white;
+border: 4px solid #FF9F55;
+top: 15px;
+border-radius: 50%;
+z-index: 1;
+}
+
+.left {
+left: 0;
+}
+
+.right {
+left: 50%;
+}
+
+.left::before {
+content: " ";
+height: 0;
+position: absolute;
+top: 22px;
+width: 0;
+z-index: 1;
+right: 30px;
+border: medium solid white;
+border-width: 10px 0 10px 10px;
+border-color: transparent transparent transparent white;
+}
+
+.right::before {
+content: " ";
+height: 0;
+position: absolute;
+top: 22px;
+width: 0;
+z-index: 1;
+left: 30px;
+border: medium solid white;
+border-width: 10px 10px 10px 0;
+border-color: transparent white transparent transparent;
+}
+
+.right::after {
+left: -16px;
+}
+
+.content {
+padding: 20px 30px;
+background-color: #FF9347;
+color: #242B2E;
+position: relative;
+border-radius: 6px;
+font-family: 'Poppins', sans-serif;
+font-weight: bold;
+}
+
+
+footer{
+    padding-top: 2%;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+
+footer a {
+    color: #FF9347;
+    font-family: monospace;
+    font-size: xx-large;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="voiceToText">
+      <h1>Speech To Text Converter</h1>
+      <div class="speechDetails">
+        <textarea
+          readonly="true"
+          placeholder="Your Converted text will be displayed here..."
+          id="convertText"
+        ></textarea>
+        <svg
+          id="copyText"
+          width="164"
+          height="164"
+          viewBox="0 0 164 164"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 0H163.92V163.92H0V0Z" fill="white" fill-opacity="0.01" />
+          <path d="M0 0H163.92V163.92H0V0Z" fill="white" fill-opacity="0.01" />
+          <path
+            d="M40.98 40.7309V23.9052C40.98 18.247 45.5667 13.6602 51.225 13.6602H140.015C145.673 13.6602 150.26 18.247 150.26 23.9052V112.695C150.26 118.353 145.673 122.94 140.015 122.94H122.999"
+            stroke="black"
+            stroke-width="13.66"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M112.695 40.9805H23.9052C18.247 40.9805 13.6602 45.5673 13.6602 51.2255V140.015C13.6602 145.674 18.247 150.26 23.9052 150.26H112.695C118.353 150.26 122.94 145.674 122.94 140.015V51.2255C122.94 45.5673 118.353 40.9805 112.695 40.9805Z"
+            fill="#008080"
+            stroke="black"
+            stroke-width="13.66"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <p id="resMsg">Your Speech is successfully coppied to your Clipboard</p>
+      <div class="buttons">
+        <button id="speakNow">
+          <svg
+            width="164"
+            height="164"
+            viewBox="0 0 164 164"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0H163.92V163.92H0V0Z"
+              fill="white"
+              fill-opacity="0.01"
+            />
+            <path
+              d="M105.865 37.5652C105.865 24.3628 95.1625 13.6602 81.9602 13.6602C68.7578 13.6602 58.0552 24.3628 58.0552 37.5652V81.9602C58.0552 95.1625 68.7578 105.865 81.9602 105.865C95.1625 105.865 105.865 95.1625 105.865 81.9602V37.5652Z"
+              fill="#008080"
+              stroke="black"
+              stroke-width="13.66"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M30.7349 78.5449C30.7349 106.836 53.669 129.77 81.9599 129.77C110.251 129.77 133.185 106.836 133.185 78.5449"
+              stroke="black"
+              stroke-width="13.66"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M81.96 129.77V150.26"
+              stroke="black"
+              stroke-width="13.66"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button id="clickToStop">
+          <svg
+            width="164"
+            height="164"
+            viewBox="0 0 164 164"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0H163.92V163.92H0V0Z"
+              fill="white"
+              fill-opacity="0.01"
+            />
+            <path
+              d="M105.865 81.9602V37.5652C105.865 24.3628 95.1626 13.6602 81.9602 13.6602C68.7578 13.6602 58.0552 24.3628 58.0552 37.5652V81.9602C58.0552 95.1625 68.7578 105.865 81.9602 105.865C95.1626 105.865 105.865 95.1625 105.865 81.9602Z"
+              stroke="black"
+              stroke-width="13.66"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M30.7349 78.5449C30.7349 106.836 53.669 129.77 81.9599 129.77C87.947 129.77 93.6941 128.743 99.0349 126.855M133.185 78.5449C133.185 85.8301 131.664 92.7602 128.923 99.0349"
+              stroke="black"
+              stroke-width="13.66"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M81.96 129.77V150.26"
+              stroke="black"
+              stroke-width="13.66"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M143.43 143.43L20.4902 20.4902"
+              stroke="black"
+              stroke-width="13.66"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button id="clickToReset">
+          <svg
+            width="164"
+            height="165"
+            viewBox="0 0 164 165"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M82.0626 0C36.9282 0 0 36.9282 0 82.0626C0 127.197 36.9282 164.125 82.0626 164.125C104.63 164.125 125.556 155.303 140.327 140.327L125.556 125.556C114.477 136.634 99.0906 143.61 81.8574 143.61C47.8015 143.61 20.3105 116.119 20.3105 82.0626C20.3105 48.0066 47.8015 20.5156 81.8574 20.5156C98.8854 20.5156 113.657 27.9013 124.735 39.1849L102.373 61.5469H163.92V0L139.506 24.4136C124.735 9.64235 104.425 0 81.8574 0H82.0626Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let speakNow = document.getElementById("speakNow");
+    let clickToStop = document.getElementById("clickToStop");
+    let clickToReset = document.getElementById("clickToReset");
+    let convertText = document.getElementById("convertText");
+
+    window.SpeechRecognition = window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+
+    speakNow.addEventListener("click", function () {
+      var speech = true;
+      recognition.interimResults = true;
+      recognition.continuous = true;
+
+      let convertTextContent = convertText.value;
+
+      clickToStop.style.display = "inline-block";
+      speakNow.style.display = "none";
+
+      recognition.addEventListener("result", (e) => {
+        const transcript = Array.from(e.results)
+          .map((result) => result[0])
+          .map((result) => result.transcript);
+
+        convertText.innerHTML = convertTextContent + " " + transcript;
+      });
+
+      if (speech == true) {
+        recognition.start();
+      }
+    });
+
+    clickToStop.addEventListener("click", function () {
+      recognition.stop();
+
+      clickToStop.style.display = "none";
+      speakNow.style.display = "inline-block";
+    });
+
+    clickToReset.addEventListener("click", function () {
+      recognition.stop();
+      clickToStop.style.display = "none";
+      speakNow.style.display = "inline-block";
+
+      convertText.innerHTML = "";
+      document.getElementById("resMsg").style.display = "none";
+    });
+
+    document.getElementById("copyText").addEventListener("click", function () {
+      var textArea = document.getElementById("convertText");
+      textArea.select();
+      navigator.clipboard.writeText(textArea.value);
+
+      document.getElementById("resMsg").style.display = "block";
+    });
+  </script>
+</html>

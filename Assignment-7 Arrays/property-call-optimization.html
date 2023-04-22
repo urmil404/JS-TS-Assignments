@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propery Call Optimization</title>
+</head>
+
+<body>
+    <h1>Propery Call Optimization</h1>
+    <script>
+
+
+        // function someLargeArray() {
+        // return new Array(1000000);
+        // var exampleObject = {
+        // 'prop1': someLargeArray(),
+        // 'prop2': someLargeArray()
+        // }
+        // function printProperty(obj){
+        // console.log(obj['prop1']);
+        // }
+        // printProperty(exampleObject)
+
+
+        // fixed Code
+        function someLargeArray() {
+            return new Array(1000000);
+        }
+        const exampleObject = {
+            prop1: someLargeArray(),
+            prop2: someLargeArray()
+        }
+        function printProperty(obj) {
+            console.log(obj.prop1?.length);
+        }
+        printProperty(exampleObject);
+    </script>
+</body>
+
+</html>

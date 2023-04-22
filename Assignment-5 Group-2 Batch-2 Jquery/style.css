@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #242b2e;
+  color: white;
+}
+
+.daysList {
+  color: #242b2e;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+/* .daysList li {
+  list-style: none;
+  text-align: center;
+  background: #0d0d0d !important;
+  color: white;
+  cursor: pointer;
+} */
+.foodItem {
+  width: 10%;
+  text-decoration: none;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table {
+        margin: 50px auto;
+    }
+
+    td {
+        height: 5rem;
+        width: 5rem;
+        text-align: center;
+        font-size: 2rem;
+        color: black;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="table" border="1">
+    </table><br /><br />
+    <script>
+        //spiral matrix
+        const arr = [
+            [1, 2, 3, 4, 5],
+            [6, 7, 8, 9, 10],
+            [11, 12, 13, 14, 15],
+            [16, 17, 18, 19, 20]
+        ];
+
+        //variables
+        const rowLen = arr.length - 1;
+        const colLen = arr[0].length - 1;
+        const table = document.getElementById('table');
+        var timeout = 0;
+
+        //to create table
+        for (var i = 0; i <= rowLen; i++) {
+            var tr = document.createElement('tr');
+            tr.setAttribute('id', i);
+            for (var j = 0; j <= colLen; j++) {
+                var td = document.createElement('td');
+                td.setAttribute('id', j);
+                td.innerHTML = 0;
+                tr.appendChild(td);
+                // console.log(tr);
+            }
+            table.appendChild(tr);
+        }
+
+        //to increase timeout by 1000
+        function incTimeout(time) {
+            timeout += time;
+        }
+
+        //to display data in table
+        function display(i, j, ele) {
+            // console.log(i+" "+j);
+            setTimeout(() => {
+                table.rows[i].cells[j].innerHTML = ele;
+            }, timeout);
+            incTimeout(1000);
+            // console.log(table.rows[i].cells[j]);
+        }
+
+
+        //to display spiral order
+        function spiralOrder(rowLen, colLen, arr) {
+            var i, sr = 0, sc = 0;
+            var er = rowLen, ec = colLen;
+
+            while (sr <= er && sc <= ec) {
+
+                for (i = sc; i <= ec; ++i) {
+                    display(sr, i, arr[sr][i]);
+                }
+                sr++;
+
+                for (i = sr; i <= er; ++i) {
+                    display(i, ec, arr[i][ec]);
+                }
+                ec--;
+
+                if (sr <= er) {
+                    for (i = ec; i >= sc; --i) {
+                        display(er, i, arr[er][i]);
+                    }
+                    er--;
+                }
+
+                if (sc <= ec) {
+                    for (i = er; i >= sr; --i) {
+                        display(i, sc, arr[i][sc]);
+                    }
+                    sc++;
+                }
+            }
+        }
+
+        // function call
+        spiralOrder(rowLen, colLen, arr);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currying Task-3</title>
+</head>
+
+<body>
+    <script>
+        const product = [
+            {
+                id: 1,
+                name: 'tv',
+                price: 18000
+
+            },
+            {
+                id: 2,
+                name: 'laptop',
+                price: 45000
+            },
+            {
+                id: 3,
+                name: 'mobile',
+                price: 30000
+            },
+            {
+                id: 4,
+                name: 'iphone',
+                price: 80000
+            },
+            {
+                id: 5,
+                name: 'ipad',
+                price: 120000
+            }
+        ];
+
+
+        function filterAllProducts(product) {
+            return function (input) {
+                if (isNaN(input)) {
+                    var filteredProducts = product.filter((obj) => {
+                        return obj.name === input;
+                    }).map(filteredObj => {
+                        return filteredObj;
+                    });
+                    return filteredProducts[0];
+                } else {
+                    var filteredProducts = product.filter((obj) => {
+                        return obj.id == input;
+                    }).map(filteredObj => {
+                        return filteredObj;
+                    });
+                    return filteredProducts[0];
+                }
+            }
+        }
+
+        let input;
+        var option = parseInt(prompt(`
+        Enter 1 for product by Id
+        Enter 2 for product by Name
+        `));
+        if (option === 1) {
+            input = parseInt(prompt("Enter product Id for search.."));
+        } else if (option === 2) {
+            input = prompt("Enter product Name for search..").toString();
+        }
+        var result = filterAllProducts(product)(input);
+        console.log(result);
+    </script>
+</body>
+
+</html>

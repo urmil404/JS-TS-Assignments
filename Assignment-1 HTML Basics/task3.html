@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-3</title>
+</head>
+<body>
+    <main align="center">
+        <h1>Survery Form <small>(Thank you for this survey)</small></h1>
+        <form action="">
+            <div>
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" placeholder="Enter name">
+            </div><br>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="email">
+            </div>  <br>
+            <div>
+                <label for="stream">Stream: </label>
+                <select name="stream" id="stream">
+                    <option value="btech">B.Tech</option>  
+                    <option value="mca">MCA</option>
+                </select>
+            </div><br>
+            <div>
+                <label for="batch">Batch: </label>
+                <select name="batch" id="batch">
+                    <option value="">Select Batch</option>
+                    <option value="2021-2023">2021-2023</option>
+                </select>
+            </div><br>
+            <div>
+                <p>Would you recommend this course?</p>
+                <input type="radio" name="recommend" id="yes" value="yes">
+                <label for="yes">yes</label>
+                <input type="radio" name="recommend" id="no" value="no">
+                <label for="no">No</label>
+            </div><br>
+            <div>
+                <label for="feedback">Feedback: </label>
+                <textarea name="feedback" id="feedback" cols="30" rows="10">Enter your feedback...</textarea><br>
+            </div><br>
+            <div>
+                <label for="suggestion">Improvements: </label>
+                <textarea name="suggestion" id="suggestion" cols="30" rows="10">Please mention any necessary improvements...</textarea>
+            </div><br>
+            <div>
+                <label for="environment">How is the College Environment? </label>
+                <select name="environment" id="environment">
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="needsImprovement">Needs Improvement</option>
+                </select>
+            </div><br>
+            <div>
+                <p>RatingBar: </p>
+                <input type="radio" name="rating" id="1">
+                <label for="1">*</label>
+                <input type="radio" name="rating" id="2">
+                <label for="2">**</label>
+                <input type="radio" name="rating" id="3">
+                <label for="3">***</label>
+                <input type="radio" name="rating" id="4">
+                <label for="4">****</label>
+                <input type="radio" name="rating" id="5">
+                <label for="5">*****</label>
+            </div><br>
+            <div>
+                <label for="anotherFeedback">Another Feedback: </label>
+                <textarea name="anotherFeedback" id="anotherFeedback" cols="30" rows="10">Another Feedback goes back...</textarea>
+            </div><br>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </main>
+</body>
+</html>

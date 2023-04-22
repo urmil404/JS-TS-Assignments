@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+</head>
+<body>
+    <!-- defination -->
+    <ul>
+        <li><h1>Write HTML Code to create a basic survey form:</h1></li>
+    </ul>
+
+
+    <!--  task-->
+
+    <center>
+        <h3>Let us know how we can improve freeCodecamp</h3>
+        <form>
+            <ul>
+                <li>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your Name">
+                </li>
+            <br>
+            <li>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your Email">
+            </li>
+            <br>
+            <li>
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" placeholder="Enter your Age">
+            </li>
+            <li>
+                <label for="studentDropdown">Which option best describes your current role ?</label>
+                <select name="studentDropdown" id="studentDropdown">
+                    <option value="Student">Student</option>
+                    <option value="Frontend">Frontend</option>
+                    <option value="Backend">Backend</option>
+                    <option value="FullStack">FullStack</option>
+                </select>
+            </li>
+            <li>
+                <label for="suggestFriend">How likely is that you would recommend freeCodecamp to a friend ?</label>
+                <br>
+                <input type="radio" id="Definitely" name="suggestFriend" value="Definitely"/>
+                <label for="Definitely">Definitely</label><br>
+                <input type="radio" id="Maybe" name="suggestFriend" value="May Be">
+                <label for="age1">Maybe</label><br>
+                <input type="radio" id="NotSure" name="suggestFriend" value="Not Sure"/>
+                <label for="NotSure">Not Sure</label><br>
+            </li>
+            <li>
+                <label for="whatYouLikeMost">What you like most in FCC ?</label>
+                <select name="whatYouLikeMost" id="whatYouLikeMost">
+                    <option value="HTML course">HTML Course</option>
+                    <option value="CSS course">CSS course</option>
+                </select>
+            </li>
+            <li>
+                <label for="whatYouLikeMost">Things that should be improved in the future(Check all that apply):</label>
+                <br>
+                <input type="checkbox" name="improve1" id="frontendpro" value="Frontend Projects">
+                <label for="improve1">Frontend Projects</label>
+                <br>
+                <input type="checkbox" name="improve2" value="Backend Projects" id="backendpro">
+                <label for="improve2">Backend Projects</label>
+                <br>
+                <input type="checkbox" name="improve3" value="Data Visualization" id="data">
+                <label for="improve3">Data Visualization</label>
+            </li>
+        </ul>
+    </form>
+</center>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-8 Assignment-4</title>
+  </head>
+  <body>
+    <script>
+      // Please create Program using nested call-backs / Promise –
+      //   Informs about Medical Camp to different societies –
+
+      // function inform() {
+      //   function AAA() {
+      //     console.log("Inform Society AAA about blood donation camp");
+      //     function BBB() {
+      //       console.log("Inform Society BBB about  health check camp");
+      //       function CCC() {
+      //         console.log("Inform Society CCC about polio vaccination camp");
+      //       }
+      //       CCC();
+      //     }
+      //     BBB();
+      //   }
+      //   AAA();
+      // }
+      // inform();
+
+      let AAA = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Inform Society AAA about blood donation camp");
+        }, 1000);
+      });
+
+      let CCC = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Inform Society CCC about polio vaccination camp");
+        }, 3000);
+      });
+
+      let BBB = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Inform Society BBB about health check camp");
+        }, 2000);
+      });
+
+      AAA.then((msg) => {
+        console.log(msg);
+        return BBB;
+      })
+        .then((msg) => {
+          console.log(msg);
+          return CCC;
+        })
+        .then((msg) => {
+          console.log(msg);
+        });
+
+      // Promise.all([AAA, BBB, CCC]).then((res) => {
+      //   for (let i in res) {
+      //     console.log(res[i]);
+      //   }
+      // });
+    </script>
+  </body>
+</html>

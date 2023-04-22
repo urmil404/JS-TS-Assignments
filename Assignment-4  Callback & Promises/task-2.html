@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-2 Assignment-4</title>
+  </head>
+  <body>
+    <script>
+      const call1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Calling Person 1...");
+        }, 1000);
+      });
+
+      const call2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Calling Person 2...");
+        }, 3000);
+      });
+
+      const call3 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Calling Person 3...");
+        }, 4000);
+      });
+
+      const call4 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Calling Person 4...");
+        }, 5000);
+      });
+
+      function callEnd() {
+        alert("END call");
+      }
+      call1
+        .then((msg) => {
+          alert(msg);
+          callEnd();
+          return call2;
+        })
+        .then((msg) => {
+          alert(msg);
+          callEnd();
+          return call3;
+        })
+        .then((msg) => {
+          alert(msg);
+          callEnd();
+          return call4;
+        })
+        .then((msg) => {
+          alert(msg);
+        });
+    </script>
+  </body>
+</html>

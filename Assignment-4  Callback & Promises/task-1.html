@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-1 Assignment-4</title>
+  </head>
+  <body>
+    <script>
+      const step1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Welcome to Angular's Training Session");
+        }, 1000);
+      });
+      const step2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Let us proceed");
+        }, 2000);
+      });
+      const step3 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Are you ok?");
+        }, 4000);
+      });
+      const step4 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("We are Fine");
+        }, 5000);
+      });
+      const step5 = new Promise((resolve, reject) => {
+        let flag = true;
+        setTimeout(() => {
+          resolve("Here We Go");
+        }, 1000);
+      });
+      const step6 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("We have douts");
+        }, 7000);
+      });
+      const step7 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("What’s the problem");
+        }, 8000);
+      });
+      const step8 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("What is the current version of Angular?");
+        }, 9000);
+      });
+      const step9 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Angular 14");
+        }, 10000);
+      });
+      const step10 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("We are having trouble in understanding Angular");
+        }, 11000);
+      });
+      const step11 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Let me explain");
+        }, 12000);
+      });
+      const step12 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("End");
+        }, 13000);
+      });
+
+      step1
+        .then((message) => {
+          console.log(message);
+          return step2;
+        })
+        .then((message) => {
+          console.log(message);
+          return step3;
+        })
+        .then((message) => {
+          console.log(message);
+          return step4;
+        })
+        .then((message) => {
+          console.log(message);
+          return step5;
+        })
+        .then((message) => {
+          console.log(message);
+          return step6;
+        })
+        .then((message) => {
+          console.log(message);
+          return step7;
+        })
+        .then((message) => {
+          console.log(message);
+          return step8;
+        })
+        .then((message) => {
+          console.log(message);
+          return step9;
+        })
+        .then((message) => {
+          console.log(message);
+          return step10;
+        })
+        .then((message) => {
+          console.log(message);
+          return step11;
+        })
+        .then((message) => {
+          console.log(message);
+          return step12;
+        })
+        .then((message) => {
+          console.info(message);
+        });
+
+      // Promise.all([step1, step2, step3])
+      //   .then(() => {
+      //     console.log(step1);
+      //     console.log(step2);
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
+      // //     console.log("");
+      // const readline = require("readline");
+      // const rl = readline.createInterface({
+      //   input: process.stdin,
+      //   output: process.stdout,
+      // });
+      // const Welcome = new Promise((resolve, reject) => {
+      //   console.log("Hello Angular Rockstars");
+      // });
+
+      // const Step1 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     console.log("Welcome to Agular’s Training Session");
+      //   }, 3000);
+      // });
+      // const Step2 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     console.log("Let us proceed");
+      //   }, 3000);
+      // });
+
+      // Promise.all([Welcome, Step1]);
+    </script>
+  </body>
+</html>

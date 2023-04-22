@@ -1,0 +1,25 @@
+body {
+  background-image: url("https://img.freepik.com/free-vector/cooking-collection-background-fast-food_91128-1526.jpg?w=1380&t=st=1677206099~exp=1677206699~hmac=b1a2bedc3427b68a6e2b773825bc360e5bbadf44fec371ebc8c84d62105ae88d");
+  /* filter: blur(8px); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  /* background: rgba(200, 197, 197, 0.803); */
+  background: rgba(40, 40, 40, 0.8);
+  backdrop-filter: saturate(180%) blur(10px);
+  height: 70vh;
+}
+
+.foodItem {
+  width: 15%;
+  text-decoration: none;
+}
+.card-body {
+  height: 12vh !important;
+}
+
+.green-btn {
+  background: green !important;
+}

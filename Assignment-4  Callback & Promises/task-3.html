@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task-3 Assignment-4</title>
+</head>
+
+<body>
+  <script>
+    //Please create a Call back / Promise Alexa using nested call-backs / Promise –
+    function alexa() {
+      alert("Hello Alexa!");
+      hru = prompt(`for you answer
+        Enter 1 for I am fine
+        Enter 2 for I am feeling dull
+        Enter 3 for I am sick`);
+      yourAnswer = parseInt(hru);
+      switch (yourAnswer) {
+        case 1:
+          case1();
+          break;
+        case 2:
+          case2();
+          break;
+        case 3:
+          case3();
+          break;
+        default:
+          alert("input not found!");
+      }
+
+      function case1() {
+        alert("Great! Can you please play a song for me?");
+        const song = prompt(`Which One
+          Press 1 for Jan Gan Man`);
+        alert("Playing Song...");
+      }
+
+      function case2() {
+        alert("Oh! What Happened?");
+        const check = prompt(`My Sound box is not working?`);
+        alert("Let me get it checked");
+      }
+
+      function case3() {
+        alert("Oh! What Happened?");
+        const know = prompt("My OS is going to crash?");
+        alert("Let me get it checked");
+      }
+    }
+
+    alexa();
+  </script>
+</body>
+
+</html>

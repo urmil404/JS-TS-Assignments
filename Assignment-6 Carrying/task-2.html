@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currying Task-2</title>
+</head>
+
+<body>
+    <h1>Currying Task-2</h1>
+    <script>
+        //volume of triangular prism using curring
+
+        function prismVolume(base) {
+            return function (height) {
+                return function (length) {
+                    return (base * height * length) / 2;
+                }
+            }
+        }
+
+        const result = prismVolume(3)(4)(5);
+        alert(result);
+    </script>
+</body>
+
+</html>

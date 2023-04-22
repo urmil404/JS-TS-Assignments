@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-10</title>
+</head>
+<body>
+<center>
+    <form action="">
+        <h1 align="center">Travel reservation form</h1>
+        <h3>* denotes mandotory</h3>
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" placeholder="First Name LastName" required>
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+        <br>
+        <br>
+        <label for="tourPackage">Select Your Tour?</label>
+        <select name="tourPackage" id="tourPackage" required>
+            <option value="Goa">Goa</option>
+            <option value="Kedarnath">Kedarnath</option>
+            <option value="Dwarka">Dwarka</option>
+            <option value="FullStack">Ujjain</option>
+        </select>
+        <br>
+        <br>
+        <label for="arrival">Arrival Date*</label>
+        <input type="date" name="arrival" id="arrival" placeholder="m/d/y" required>
+        <br>
+        <br>
+        <label for="persons">Numbers of persons*</label>
+        <input type="text" name="numberOfPerson" id="numberOfPerson" placeholder="UNKNOW_TYPE" required>
+        <br>
+        <br>
+        <label for="whatYouLikeMost">What would you want to avail? *</label>
+        <br>
+        <br>
+        <input type="checkbox" name="bording" id="bording" value="Frontend Projects">
+        <label for="bording">Boarding</label>
+        <br>        
+        <br>        
+        <input type="checkbox" name="fooding" value="Backend Projects" id="fooding">
+        <label for="fooding">Fooding</label>
+        <br>
+        <br>
+        <input type="checkbox" name="sightseeing" value="Data Visualization" id="sightseeing">
+        <label for="sightseeing">Sight Seeing</label>
+        <br>
+        <br>
+        <label for="discountCode">Discount Coupen Code</label>
+        <input type="text" name="discountCode" id="discountCode" placeholder="UNKNOW_TYPE">
+        <br>
+        <br>
+        <label for="termsCondition">Terms and conditions *</label>
+        <br>
+        <br>
+        <input type="radio" id="agree" name="termsCondition" value="Agree" required>
+        <label for="agree">I agree</label><br>
+        <input type="radio" id="disagree" name="termsCondition" value="Disagree"/>
+        <label for="disagree">I disagree</label><br>
+        <br>
+        <br>
+        <button type="submit">Complete Reservation</button>
+    </form>
+</center>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task-6 Assignment-4</title>
+</head>
+
+<body>
+  <script>
+    // Please create Program using nested call-backs / Promise –
+    //   Performs Movie Information search from 3 sources –
+    function showMovieInfo(movie) {
+      let basicInfo = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(
+            "In their first year of college, students Farhan Qureshi and Raju Rastogi join the prestigious Imperial College of Engineering (ICE) in Delhi and meet Ranchhoddas Shamaldas Chanchad aka Rancho, their roommate, who is passionate about experimenting with different things, and consequently tops the class. Rancho's carefree approach to education results in him being at odds with the college's director, Dr. Viru Sahastrabuddhe (nicknamed Virus by the students), who believes in a strict and competitive education system."
+          );
+        }, 1000);
+      });
+
+      let location = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(
+            "Indian Institute of Management, Bangalore campus which served as Imperial College of Engineering. To prepare for the roles, the crew members stayed at the institution's dormitory blocks and at the college hostel.[64] Though Khan saw the pictures of the location, he decided to see the location for real and wanted to stay at the hostel"
+          );
+        }, 3000);
+      });
+
+      let cast = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(
+            "3 Idiots is a 2009 Indian Hindi-language coming-of-age comedy-drama film written, edited and directed by Rajkumar Hirani, co-written by Abhijat Joshi and produced by Vidhu Vinod Chopra. Adapted loosely from Chetan Bhagat's novel Five Point Someone,[5] the film stars Aamir Khan, R. Madhavan and Sharman Joshi in the titular roles, marking their reunion three years after Rang De Basanti (2006), while Kareena Kapoor, Boman Irani and Omi Vaidya star in pivotal roles."
+          );
+        }, 4000);
+      });
+
+      basicInfo
+        .then((info) => {
+          alert(info);
+          return location;
+        })
+        .then((location) => {
+          alert(location);
+          return cast;
+        })
+        .then((cast) => {
+          alert(cast);
+        })
+        .catch((error) => {
+          alert("Movie info not available: " + error);
+        });
+    }
+    const movie = prompt("Enter a movie name");
+    if (movie.toString() === "3 idiots") {
+      showMovieInfo(movie.toString());
+    } else {
+      alert("No movie found");
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-4 Assignment-4</title>
+  </head>
+  <body>
+    <script>
+      // Please create Weather Information App using nested call-backs / Promise –
+
+      function getname() {
+        const name = prompt("What is your name?");
+        console.log(`my name is ${name}`);
+      }
+      function getLocation() {
+        const location = prompt("What is your location?");
+        console.log(`my location is ${location}`);
+      }
+
+      function getToKnow() {
+        const know = prompt("What you want to know?");
+        if (know.toString() == "Temperature") {
+          console.log("Great ! The current temperature is 24C");
+        }
+      }
+
+      function greeting() {
+        console.log("Hello");
+        console.log("Welcome to the Weather Information App");
+        getname();
+        getLocation();
+        getToKnow();
+      }
+
+      greeting();
+    </script>
+  </body>
+</html>

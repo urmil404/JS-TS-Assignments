@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1 Assignment-7</title>
+</head>
+
+<body>
+    <script>
+        const customSlice = (arr, startIndex = 0, endIndex = arr.length) => {
+            var slicedArray = [];
+            endIndex > arr.length ? endIndex = arr.length : endIndex
+            startIndex < 0 ? startIndex += arr.length : startIndex
+            endIndex < 0 ? endIndex += arr.length : endIndex
+            for (let i = startIndex; i < endIndex; i++) {
+                slicedArray.push(arr[i]);
+            }
+            return slicedArray;
+        }
+
+        var fruits = ["Pineapple", "Orange", "Apple", "Mango"];
+        console.log(fruits.slice(fruits));
+        console.log("==========");
+        console.log(fruits.slice(3));
+        console.log(customSlice(fruits, 3));
+    </script>
+</body>
+
+</html>

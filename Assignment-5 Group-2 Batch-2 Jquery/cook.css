@@ -1,0 +1,13 @@
+body {
+  background-image: url("admin.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background: rgba(40, 40, 40, 0.8);
+  backdrop-filter: saturate(180%) blur(10px);
+  z-index: 4;
+  height: 60vh;
+}

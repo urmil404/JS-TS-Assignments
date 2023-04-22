@@ -1,0 +1,12 @@
+body {
+  background-image: url("index.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  background: rgba(40, 40, 40, 0.8);
+  backdrop-filter: saturate(180%) blur(10px);
+  z-index: 4;
+  height: 60vh;
+}

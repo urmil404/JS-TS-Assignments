@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Median-Two -Sorted-Arrays</title>
+    <style>
+        #spanVal {
+            color: blue;
+        }
+
+        #boldVal {
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Median-Two -Sorted-Arrays</h1>
+    <script>
+        let arr1 = [1, 2, 3, 9, 4];
+        let arr2 = [14, 17, 11, 15, 19];
+
+        function medianOfArrays(arr1, arr2) {
+            arr3 = arr1.concat(arr2);
+            arr3.sort((a, b) => a - b);
+
+            const midIndex = Math.floor(arr3.length / 2);
+
+            if (arr3.length % 2 === 0) {
+                return (arr3[midIndex - 1] + arr3[midIndex]) / 2;
+            }
+
+            return midIndex;
+        }
+
+        console.log(medianOfArrays(arr1, arr2));
+    </script>
+</body>
+
+</html>

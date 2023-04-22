@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find same element in K-arrays</title>
+</head>
+
+<body>
+    <h1>Find same element in K-arrays</h1>
+    <script>
+
+        //for 2 arrays
+
+        let arr1 = [1, 2, 3, 9, 4];
+        let arr2 = [4, 7, 1, 5, 9];
+        let arrFinal = [];
+
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr2.length; j++) {
+                if (arr1[i] === arr2[j]) {
+                    arrFinal.push(arr1[i]);
+                    break;
+                }
+            }
+        }
+
+        arrFinal.forEach(element => {
+            console.log(element);
+        });
+
+
+         // var arr = [];
+        // let map = new Map();
+
+        // const insertArray = (key, array) => {
+        //     let n = prompt("Enter array Element in K array");
+        //     for (var i = 0; i < n; i++) {
+        //         arr.push(prompt("Enter a number"));
+        //     }
+        //     map.set(key, array);
+        //     console.log(map.get(key));
+        // }
+        // insertArray()
+
+    </script>
+</body>
+
+</html>

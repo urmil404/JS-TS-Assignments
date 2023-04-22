@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-7 Assignment-4</title>
+  </head>
+  <body>
+    <script>
+      function informEvents(message) {
+        setTimeout(() => {
+          console.log(
+            `Inform Javascript Community about upcoming event with Javascript venue and dates`
+          );
+        }, 1000);
+
+        let promise = new Promise((resolve, reject) => {
+          resolve(message);
+        })
+          .then((message) => {
+            console.log(
+              `Inform ${message} Community about upcoming event with ${message} venue and dates`
+            );
+          })
+          .then((message) => {
+            setTimeout(() => {
+              console.log(
+                `Inform CSS Community about upcoming event with CSS venue and dates`
+              );
+            }, 2000);
+          });
+      }
+
+      informEvents("HTML");
+    </script>
+  </body>
+</html>

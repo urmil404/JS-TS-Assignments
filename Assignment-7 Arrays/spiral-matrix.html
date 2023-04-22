@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiral Matrix</title>
+</head>
+
+<body>
+    <script>
+        const matrix = [
+            [1, 2, 3, 4, 5],
+            [6, 7, 8, 9, 10],
+            [11, 12, 13, 14, 15],
+            [16, 17, 18, 19, 20],
+        ];
+
+        const logicOne = () => {
+            let total = 20;
+            let count = 0;
+            let startingRow = 0,
+                startingCol = 0,
+                endingRow = matrix.length - 1,
+                endingCol = matrix[0].length - 1;
+
+            while (count < total) {
+
+                //for lef to right
+                for (let i = startingCol; i <= endingCol; i++) {
+                    document.write(" " + matrix[startingRow][i]);
+                    count++;
+                }
+                startingRow++;
+
+                //for top to bottom side
+                for (let i = startingRow; i <= endingRow; i++) {
+                    document.write(" " + matrix[i][endingCol]);
+                    count++;
+                }
+                endingCol--;
+
+                // for right to left side
+                for (let i = endingCol; i >= startingCol; i--) {
+                    document.write(" " + matrix[endingRow][i]);
+                    count++;
+                }
+                endingRow--;
+
+                // for bottom to top side
+                for (let i = endingRow; i >= startingRow; i--) {
+                    document.write(" " + matrix[i][startingCol]);
+                    count++;
+                }
+                startingCol++;
+            }
+        };
+
+
+
+        // logic 2 using recursion
+
+        const logicTwo = (matrix, i, j, m, n) => {
+            if (i >= m || j >= n) return;
+
+            // print First Row
+            for (let p = j; p < n; p++) {
+                document.write(matrix[i][p] + " ");
+            }
+
+            // print Last Column
+            for (let p = i + 1; p < m; p++) {
+                document.write(matrix[p][n - 1] + " ");
+            }
+
+            if (m - 1 != i) {
+                for (let p = n - 2; p >= j; p--) {
+                    document.write(matrix[m - 1][p] + " ");
+                }
+            }
+
+            if (n - 1 != j) {
+                for (let p = m - 2; p > i; p--) {
+                    document.write(matrix[p][j] + " ");
+                }
+            }
+            logicTwo(matrix, i + 1, j + 1, m - 1, n - 1);
+        };
+
+        let row = matrix.length; // m:4
+        let col = matrix[0].length; // n:5
+
+
+        // calling diff logics
+        // logicOne();
+        logicTwo(matrix, 0, 0, row, col);
+
+    </script>
+</body>
+
+</html>
